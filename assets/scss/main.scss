@@ -414,10 +414,9 @@ $baseRelURL: "{{ strings.TrimSuffix (.Site.BaseURL | relURL) "/" }}";
 
 // Tags Page
 
-{{ if .Site.Params.enableTagCloud }}
+{{ if .Site.Params.TagCloud.enable }}
     @import "pages/tag-cloud";
 {{ end }}
-
 
 // 404 Page
 

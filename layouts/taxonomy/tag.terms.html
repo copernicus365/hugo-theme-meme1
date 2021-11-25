@@ -1,5 +1,5 @@
 {{ define "main" }}
-    {{ if .Site.Params.enableTagCloud }}
+    {{ if .Site.Params.TagCloud.enable }}
         {{ partial "pages/tag-cloud.html" . }}
     {{ else }}
         {{ partial "pages/taxonomy.html" . }}

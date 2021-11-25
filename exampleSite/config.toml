@@ -426,16 +426,6 @@ uglyURLs = false
 
 
     ######################################
-    # Tags Page
-
-    enableTagCloud = true
-
-    fontUnit = "em"
-    largestFontSize = 2.5
-    smallestFontSize = 1
-
-
-    ######################################
     # List Page
 
     listWidth = 36
@@ -464,26 +454,6 @@ uglyURLs = false
     # Translate the month? (valid for title)
     i18nMonth = false
 
-
-    ######################################
-    # Taxonomy List Page
-
-    # Note: for categories page, you can
-    #       set `enableTree` to false to
-    #       get a normal taxonomy list
-    #       page; for tags page, you can
-    #       set `enableTagCloud` to false
-    #       to get a normal taxonomy list
-    #       page.
-
-    # Display count of posts in each
-    # taxonomy term?
-    displayTaxonomyTermCount = true
-
-    # Set to a non-negative number to limit
-    # the number of posts displayed per
-    # taxonomy term.
-    limitEntriesLimit = -1
 
 
     ######################################
@@ -1411,3 +1381,42 @@ uglyURLs = false
     fofVideoMp4 = ""
     # Note: you can leave these two
     #       options empty("")
+
+
+    ######################################
+    # Taxonomy List Page
+
+    # Note: for categories page, you can
+    #       set `enableTree` to false to
+    #       get a normal taxonomy list
+    #       page; for tags page, you can
+    #       set `enable-TagCloud` to false
+    #       to get a normal taxonomy list
+    #       page.
+
+    # Display count of posts in each
+    # taxonomy term?
+    displayTaxonomyTermCount = true
+
+    # Set to a non-negative number to limit
+    # the number of posts displayed per
+    # taxonomy term.
+    limitEntriesLimit = -1
+
+
+    ######################################
+    # Tags Page
+    # NP Note: I really don't like general non-descriptive property
+    # names like this, e.g. `largestFontSize` should be `tagCloudLargestFontSize`!
+    # *Especially* bad here is the highly too generalistic `fontUnit` property?!
+    # I searched globally in the theme and it is only used within the `tag-cloud.html`
+    # page as with these others, can we move to a tagCloud property object?!
+    # Looks thus far like we can, but unsuccessful when not a child of Params, so for now:
+    # `params.tagCloud`
+
+[params.tagCloud]
+    enable = true
+    booLoo = false # ignore, testing...
+    fontUnit = "em"
+    largestFontSize = 2.5
+    smallestFontSize = 1
